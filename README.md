@@ -3,17 +3,33 @@ custom and reusable components for react-native
 ## Installation
 
 ```sh
-npm install react-native-custom-components
+npm install khaled-salem-custom-components
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-custom-components";
+import { BackGround } from 'khaled-salem-custom-components';
+
+export default function App() {
+  const image = 'link your source';
+  return (
+    <BackGround image={image} opacity={0.1}>
+      <Text style={styles.text}>Test custom image BG</Text>
+    </BackGround>
+  );
+}
+
+const styles = StyleSheet.create({
+  text: {
+    color: '#000000',
+    alignSelf: 'center',
+    fontSize: 14,
+  },
+});
 
 // ...
 
-const result = await multiply(3, 7);
 ```
 
 ## Contributing
@@ -23,7 +39,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
