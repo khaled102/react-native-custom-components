@@ -5,15 +5,16 @@ import styles from './style';
 type propsType = {
   children: React.ReactNode;
   opacity?: number;
+  image: any;
 };
 export const BackGround = (props: propsType) => {
-  const { children, opacity = 0.1 } = props;
-  const image = require('../../assets/background.jpeg');
+  const { children, opacity = 0.1, image } = props;
   return (
     <ImageBackground
       source={image}
       resizeMode="cover"
-      style={[styles.background, { opacity: opacity }]}
+      imageStyle={{ opacity: opacity }}
+      style={styles.background}
     >
       {children}
     </ImageBackground>
