@@ -19,5 +19,5 @@
     "@babel/core": "^7.12.9",
     "babel-plugin-module-resolver": "^4.1.0"
   },
-  "private": true
+  "private": false
 }
