@@ -1,31 +1,21 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-custom-components';
+import { StyleSheet, Text } from 'react-native';
+import { BackGround } from 'khaled-salem-custom-components';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
+  const image = null;
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <BackGround image={image} opacity={0.1}>
+      <Text style={styles.text}>Test custom image BG</Text>
+    </BackGround>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  text: {
+    color: '#000000',
+    alignSelf: 'center',
+    fontSize: 14,
   },
 });
